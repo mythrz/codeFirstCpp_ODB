@@ -40,6 +40,7 @@
 *[:upper:]-odb.hxx
 *[:upper:]-odb.ixx
 *.odb
+Code/odb/*
 
 # Build Systems (CMake) build directory
 [Bb]uild/

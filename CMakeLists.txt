@@ -30,6 +30,8 @@ add_executable(CharacterLoadoutTests
     tests/CharacterLoadoutTest001.cpp
     Code/Include/Entities/Character.h
     Code/Source/Entities/Character.cpp
+    Code/Include/Entities/Item.h
+    Code/Source/Entities/Item.cpp
     Code/Include/Helper/DB_Helper.h
     Code/Source/Helper/DB_Helper.cpp
     # Character.hxx
@@ -51,6 +53,10 @@ target_include_directories(CharacterLoadoutTests PRIVATE
 include(cmake/OdbCompile.cmake)
 odb_compile(CharacterLoadoutTests 
     "${CMAKE_CURRENT_SOURCE_DIR}/Code/Include/Entities/Character.h"
+    "${CMAKE_CURRENT_SOURCE_DIR}/Code/odb"
+)
+odb_compile(CharacterLoadoutTests 
+    "${CMAKE_CURRENT_SOURCE_DIR}/Code/Include/Entities/Item.h"
     "${CMAKE_CURRENT_SOURCE_DIR}/Code/odb"
 )
 
