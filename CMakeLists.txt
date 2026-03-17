@@ -28,10 +28,14 @@ link_directories(
 
 add_executable(CharacterLoadoutTests
     tests/CharacterLoadoutTest001.cpp
+
     Code/Include/Entities/Character.h
     Code/Source/Entities/Character.cpp
     Code/Include/Entities/Item.h
     Code/Source/Entities/Item.cpp
+    Code/Include/Entities/Container.h
+    Code/Source/Entities/Container.cpp
+
     Code/Include/Helper/DB_Helper.h
     Code/Source/Helper/DB_Helper.cpp
     # Character.hxx
@@ -57,6 +61,10 @@ odb_compile(CharacterLoadoutTests
 )
 odb_compile(CharacterLoadoutTests 
     "${CMAKE_CURRENT_SOURCE_DIR}/Code/Include/Entities/Item.h"
+    "${CMAKE_CURRENT_SOURCE_DIR}/Code/odb"
+)
+odb_compile(CharacterLoadoutTests 
+    "${CMAKE_CURRENT_SOURCE_DIR}/Code/Include/Entities/Container.h"
     "${CMAKE_CURRENT_SOURCE_DIR}/Code/odb"
 )
 
